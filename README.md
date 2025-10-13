@@ -22,7 +22,7 @@ You can fork this repo to modify and make changes of your own. Please give me pr
 
 ## Built With
 
-My personal portfolio <a href="https://my-portfolio-seven-ashen-96.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://my-portfolio-seven-ashen-96.vercel.app/" target="_blank">Narmada</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
