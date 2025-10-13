@@ -3,7 +3,7 @@
   <a href="https://my-portfolio-seven-ashen-96.vercel.app/" target="_blank">Narmada</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Demo" src="./Images/me-img.jpg" />
 </div>
 
 <br/>
