@@ -1,6 +1,6 @@
 <h2 align="center">
   My Portfolio Website<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
+  <a href="https://my-portfolio-seven-ashen-96.vercel.app/" target="_blank">Narmada</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
