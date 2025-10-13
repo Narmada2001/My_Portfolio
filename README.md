@@ -17,7 +17,6 @@
 
 
 
-## TL;DR
 
 You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Narmada2001](https://github.com/Narmada2001/My_Portfolio.git). Thanks!
 
