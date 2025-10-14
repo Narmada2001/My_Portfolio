@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.png"; // Your photo or home illustration
+import homeLogo from "../../Assets/home-main.png";
 import Particle from "../Particle";
 import Type from "./Type";
 import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
@@ -9,15 +9,29 @@ import { FaLinkedinIn } from "react-icons/fa";
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
-        <Particle />
+      <Container fluid className="home-section" id="home" style={{ position: "relative" }}>
+        {/* Particle behind content */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 0,
+          }}
+        >
+          <Particle />
+        </div>
+
+        {/* Content above particles */}
         <Container className="home-content">
-          <Row className="align-items-center justify-content-center"> {/* Added justify-content-center for better centering on smaller screens */}
+          <Row className="align-items-center justify-content-center">
             {/* Text & Social Links */}
-            <Col xs={12} md={7} className="home-header text-center text-md-start"> {/* Added text-center for small screens, text-md-start for medium and up */}
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+            <Col xs={12} md={7} className="home-header text-center text-md-start">
+              <h1 className="heading" style={{ paddingBottom: 15 }}>
                 Hello There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className="wave" role="img" aria-label="wave">
                   👋🏻
                 </span>
               </h1>
@@ -27,19 +41,15 @@ function Home() {
                 <strong className="main-name"> Narmada Gunathilaka</strong>
               </h1>
 
-              <div style={{ padding: "30px 0", textAlign: "center", display: "flex", justifyContent: "center" }}> {/* Centered Type component for small screens */}
+              <div className="type-container">
                 <Type />
               </div>
 
-              {/* Social Links Section */}
               <div className="home-about-social" style={{ marginTop: "30px" }}>
                 <p>
                   Feel free to <span className="purple">connect </span>with me
                 </p>
-                <ul
-                  className="home-about-social-links d-flex justify-content-center justify-content-md-start" // Centered social icons for small screens, left-aligned for medium and up
-                  style={{ gap: "20px", padding: 0 }} // Removed default list padding
-                >
+                <ul className="home-about-social-links d-flex justify-content-center justify-content-md-start">
                   <li className="social-icons">
                     <a
                       href="https://github.com/Narmada2001"
@@ -77,15 +87,8 @@ function Home() {
               </div>
             </Col>
 
-            {/* Image with clickable link */}
-            <Col
-              xs={12} // Takes full width on extra small screens
-              md={5}
-              style={{
-                paddingBottom: 20,
-                textAlign: "center",
-              }}
-            >
+            {/* Image */}
+            <Col xs={12} md={5} style={{ paddingBottom: 20, textAlign: "center" }}>
               <a
                 href="https://www.linkedin.com/in/narmada-gunathilaka-2818372a7/"
                 target="_blank"
@@ -96,8 +99,8 @@ function Home() {
                   alt="Narmada Gunathilaka"
                   className="img-fluid"
                   style={{
-                    maxHeight: "300px", // Reduced max-height for smaller screens, will be overridden by media query for larger screens
-                    width: "auto", // Added to maintain aspect ratio with maxHeight
+                    maxHeight: "300px",
+                    width: "auto",
                     borderRadius: "50%",
                     objectFit: "cover",
                     border: "4px solid #6c63ff",
@@ -115,3 +118,4 @@ function Home() {
 }
 
 export default Home;
+
