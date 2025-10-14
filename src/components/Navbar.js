@@ -84,6 +84,17 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+                 <Nav.Item>
+  <Nav.Link
+    as={Link}
+    to="/achievements"   // ✅ correct path
+    onClick={() => updateExpanded(false)}
+  >
+    <AiOutlineUser style={{ marginBottom: "2px" }} /> Achievements
+  </Nav.Link>
+</Nav.Item>
+
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
