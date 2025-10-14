@@ -1,21 +1,33 @@
-// src/components/Contact/Contact.js
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineMail, AiOutlinePhone, AiOutlineDownload } from "react-icons/ai";
-import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // optional icons
+import { FaMapMarkerAlt } from "react-icons/fa";
 import pdf from "../../Assets/Narmada (SE).pdf";
-import Particle from "../Particle"; // ✅ added for background
+import Particle from "../Particle"; 
 import "./Contact.css";
 
 const Contact = () => {
   return (
-    <Container fluid className="contact-section py-5">
-      {/* ✅ Dark Particle Background */}
-      <Particle />
+    <Container fluid className="contact-section py-5" style={{ position: "relative" }}>
+      
+      {/* Particle Background */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+        }}
+      >
+        <Particle />
+      </div>
 
-      <Container>
+      {/* Main Content */}
+      <Container style={{ position: "relative", zIndex: 1 }}>
         <Row className="justify-content-center align-items-start">
-          
+
           {/* ===== LEFT SIDE: Contact Info ===== */}
           <Col lg={5} md={6} sm={12} className="contact-info mb-4">
             <h2 className="section-title mb-4 text-light">Get in Touch</h2>
@@ -50,21 +62,11 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Optional social media links */}
-            {/* <div className="social-area">
-                <div className="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
-                    <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-                </div>
-            </div> */}
-
             <div className="mt-4">
               <Button variant="primary" href={pdf} target="_blank" className="download-btn">
                 <AiOutlineDownload /> &nbsp; Download CV
               </Button>
             </div>
-           
           </Col>
 
           {/* ===== RIGHT SIDE: Contact Form ===== */}
@@ -121,5 +123,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
