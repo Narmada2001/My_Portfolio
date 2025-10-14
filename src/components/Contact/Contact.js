@@ -2,21 +2,25 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineMail, AiOutlinePhone, AiOutlineDownload } from "react-icons/ai";
-import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // FaFacebook, FaInstagram, FaLinkedin are not used in your current HTML
+import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // optional icons
 import pdf from "../../Assets/Narmada (SE).pdf";
+import Particle from "../Particle"; // ✅ added for background
 import "./Contact.css";
 
 const Contact = () => {
   return (
     <Container fluid className="contact-section py-5">
+      {/* ✅ Dark Particle Background */}
+      <Particle />
+
       <Container>
         <Row className="justify-content-center align-items-start">
           
           {/* ===== LEFT SIDE: Contact Info ===== */}
           <Col lg={5} md={6} sm={12} className="contact-info mb-4">
-            <h2 className="section-title mb-4">Get in Touch</h2>
+            <h2 className="section-title mb-4 text-light">Get in Touch</h2>
 
-            <div className="contact-item mb-3">
+            <div className="contact-item mb-3 text-light">
               <div className="icon-circle">
                 <FaMapMarkerAlt size={22} />
               </div>
@@ -26,7 +30,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact-item mb-3">
+            <div className="contact-item mb-3 text-light">
               <div className="icon-circle">
                 <AiOutlineMail size={22} />
               </div>
@@ -36,7 +40,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact-item mb-3">
+            <div className="contact-item mb-3 text-light">
               <div className="icon-circle">
                 <AiOutlinePhone size={22} />
               </div>
@@ -46,7 +50,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social media links could go here if you decide to add them back */}
+            {/* Optional social media links */}
             {/* <div className="social-area">
                 <div className="social-links">
                     <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
@@ -65,7 +69,10 @@ const Contact = () => {
 
           {/* ===== RIGHT SIDE: Contact Form ===== */}
           <Col lg={6} md={6} sm={12}>
-            <div className="contact-form p-4 rounded shadow-sm">
+            <div
+              className="contact-form p-4 rounded shadow-sm"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", color: "white" }}
+            >
               <form action="https://formspree.io/f/xrbyrzve" method="POST">
                 <Row className="mb-3">
                   <Col md={6} className="mb-3 mb-md-0">
@@ -114,4 +121,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

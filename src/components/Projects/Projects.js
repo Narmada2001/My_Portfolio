@@ -23,85 +23,73 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
 
-        {/* Responsive Grid - 2 cards per row */}
+        {/* Responsive Grid - Adjusted for better responsiveness */}
         <Row
           className="justify-content-center"
-          style={{ rowGap: "25px", columnGap: "10px" }}
+          style={{ rowGap: "25px", columnGap: "0px" }} // Ensure no extra column gap from Row
         >
           <Col
-            xs={12}
-            sm={6}
-            md={6}
-            lg={6}
-            className="project-card d-flex align-items-stretch justify-content-center"
-            style={{ padding: "10px" }}
+            xs={12} // Full width on extra small screens
+            sm={12} // Full width on small screens
+            md={6} // Two cards per row on medium screens
+            lg={6} // Two cards per row on large screens
+            className="d-flex justify-content-center p-3" // Add padding directly here and justify content
           >
-            <div style={{ maxWidth: "90%", transform: "scale(0.95)" }}>
-              <ProjectCard
-                imgPath={chatify}
-                isBlog={false}
-                title="Dengue Patient Management System"
-                description="Developing a web-based system for managing dengue patient records, including ward management, vitals tracking, and secure authentication to improve hospital efficiency."
-                ghLink="https://github.com/mayuraabhayasinghe/dengue-patient-management-system-grp4.git"
-              />
-            </div>
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Dengue Patient Management System"
+              description="Developing a web-based system for managing dengue patient records, including ward management, vitals tracking, and secure authentication to improve hospital efficiency."
+              ghLink="https://github.com/mayuraabhayasinghe/dengue-patient-management-system-grp4.git"
+            />
           </Col>
 
           <Col
             xs={12}
-            sm={6}
+            sm={12}
             md={6}
             lg={6}
-            className="project-card d-flex align-items-stretch justify-content-center"
-            style={{ padding: "10px" }}
+            className="d-flex justify-content-center p-3"
           >
-            <div style={{ maxWidth: "90%", transform: "scale(0.95)" }}>
-              <ProjectCard
-                imgPath={bitsOfCode}
-                isBlog={false}
-                title="Sport Center Inventory Management System"
-                description="This system is developed for the Sports Center of Sabaragamuwa University of Sri Lanka to efficiently manage and maintain sports equipment and inventory records."
-                ghLink="https://github.com/IndWit/sport-center-inventory-management"
-              />
-            </div>
+            <ProjectCard
+              imgPath={bitsOfCode}
+              isBlog={false}
+              title="Sport Center Inventory Management System"
+              description="This system is developed for the Sports Center of Sabaragamuwa University of Sri Lanka to efficiently manage and maintain sports equipment and inventory records."
+              ghLink="https://github.com/IndWit/sport-center-inventory-management"
+            />
           </Col>
 
           <Col
             xs={12}
-            sm={6}
+            sm={12}
             md={6}
             lg={6}
-            className="project-card d-flex align-items-stretch justify-content-center"
-            style={{ padding: "10px" }}
+            className="d-flex justify-content-center p-3"
           >
-            <div style={{ maxWidth: "90%", transform: "scale(0.95)" }}>
-              <ProjectCard
-                imgPath={editor}
-                isBlog={false}
-                title="Kavi FooD"
-                description="A responsive food ordering platform that allows users to browse menus, add items to cart, place orders, and manage accounts through Sign In/Sign Up functionality."
-                ghLink="https://github.com/Narmada2001/Kavi_FooD.git"
-              />
-            </div>
+            <ProjectCard
+              imgPath={editor}
+              isBlog={false}
+              title="Kavi FooD"
+              description="A responsive food ordering platform that allows users to browse menus, add items to cart, place orders, and manage accounts through Sign In/Sign Up functionality."
+              ghLink="https://github.com/Narmada2001/Kavi_FooD.git"
+            />
           </Col>
 
           <Col
             xs={12}
-            sm={6}
+            sm={12}
             md={6}
             lg={6}
-            className="project-card d-flex align-items-stretch justify-content-center"
-            style={{ padding: "10px" }}
+            className="d-flex justify-content-center p-3"
           >
-            <div style={{ maxWidth: "90%", transform: "scale(0.95)" }}>
-              <ProjectCard
-                imgPath={leaf}
-                isBlog={false}
-                title="Kolonna StoreTrack"
-                description="Designing a digital system to automate store and inventory operations, enabling efficient tracking, request management, and reporting for improved transparency and service delivery."
-                ghLink="https://github.com/IndWit/sport-center-inventory-management"
-              />
-            </div>
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="Kolonna StoreTrack"
+              description="Designing a digital system to automate store and inventory operations, enabling efficient tracking, request management, and reporting for improved transparency and service delivery."
+              ghLink="https://github.com/IndWit/sport-center-inventory-management"
+            />
           </Col>
         </Row>
       </Container>
