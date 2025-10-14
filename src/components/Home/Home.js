@@ -3,10 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.png"; // Your photo or home illustration
 import Particle from "../Particle";
 import Type from "./Type";
-import {
-  AiFillGithub,
-  AiFillFacebook,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
@@ -15,9 +12,9 @@ function Home() {
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
-          <Row className="align-items-center">
+          <Row className="align-items-center justify-content-center"> {/* Added justify-content-center for better centering on smaller screens */}
             {/* Text & Social Links */}
-            <Col md={7} className="home-header">
+            <Col xs={12} md={7} className="home-header text-center text-md-start"> {/* Added text-center for small screens, text-md-start for medium and up */}
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hello There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
@@ -30,7 +27,7 @@ function Home() {
                 <strong className="main-name"> Narmada Gunathilaka</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: "30px 0", textAlign: "center", display: "flex", justifyContent: "center" }}> {/* Centered Type component for small screens */}
                 <Type />
               </div>
 
@@ -40,8 +37,8 @@ function Home() {
                   Feel free to <span className="purple">connect </span>with me
                 </p>
                 <ul
-                  className="home-about-social-links"
-                  style={{ display: "flex", gap: "20px" }}
+                  className="home-about-social-links d-flex justify-content-center justify-content-md-start" // Centered social icons for small screens, left-aligned for medium and up
+                  style={{ gap: "20px", padding: 0 }} // Removed default list padding
                 >
                   <li className="social-icons">
                     <a
@@ -82,6 +79,7 @@ function Home() {
 
             {/* Image with clickable link */}
             <Col
+              xs={12} // Takes full width on extra small screens
               md={5}
               style={{
                 paddingBottom: 20,
@@ -94,16 +92,17 @@ function Home() {
                 rel="noreferrer"
               >
                 <img
-                  src={homeLogo} // Replace with your photo if you want
+                  src={homeLogo}
                   alt="Narmada Gunathilaka"
                   className="img-fluid"
                   style={{
-                    maxHeight: "450px",
-                    borderRadius: "50%", // circular
+                    maxHeight: "300px", // Reduced max-height for smaller screens, will be overridden by media query for larger screens
+                    width: "auto", // Added to maintain aspect ratio with maxHeight
+                    borderRadius: "50%",
                     objectFit: "cover",
                     border: "4px solid #6c63ff",
                     boxShadow: "0 0 25px rgba(108, 99, 255, 0.5)",
-                    cursor: "pointer", // show clickable
+                    cursor: "pointer",
                   }}
                 />
               </a>
