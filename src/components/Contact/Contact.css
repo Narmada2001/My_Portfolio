@@ -3,7 +3,7 @@
 .contact-section {
   background-color: #0a0014; /* dark purple shade */
   color: #ffffff;
-  padding: 100px 20px;
+  padding: 80px 15px; /* Adjusted padding for smaller screens */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -11,11 +11,12 @@
 
 .contact-info {
   padding: 20px;
+  text-align: left; /* Default text alignment for larger screens */
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start for better multi-line text alignment */
   gap: 15px;
   margin-bottom: 25px;
 }
@@ -27,100 +28,203 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
-.contact-item h5 {
+.contact-item h6 {
   margin: 0;
   font-weight: 700;
   color: #a855f7;
+  font-size: 1.1rem; /* Slightly larger for prominence */
 }
 
 .contact-item p {
-  margin: 6px 0 0;
+  margin: 4px 0 0; /* Adjusted margin */
   color: #ddd;
   font-size: 0.95rem;
+  line-height: 1.5; /* Improved readability */
 }
 
 .social-area {
-  margin-top: 25px;
+  margin-top: 30px; /* Increased margin */
 }
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 20px; /* Increased gap */
+  justify-content: flex-start; /* Align social links to the start by default */
 }
 
 .social-links a {
   color: white;
-  font-size: 1.3rem;
-  transition: color 0.3s;
+  font-size: 1.5rem; /* Slightly larger icons */
+  transition: color 0.3s ease-in-out;
 }
 
 .social-links a:hover {
   color: #a855f7;
+  transform: translateY(-2px); /* Subtle hover effect */
 }
 
 .download-btn {
-  margin-top: 30px;
+  margin-top: 40px; /* Increased margin */
   background-color: #a855f7 !important;
   color: white !important;
   border: none;
-  transition: background-color 0.3s ease;
+  padding: 12px 25px; /* Adjusted padding */
+  font-size: 1rem; /* Consistent font size */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px; /* Slightly rounded corners */
 }
 
 .download-btn:hover {
   background-color: #9333ea !important;
+  transform: translateY(-2px); /* Subtle hover effect */
 }
 
 .contact-form {
-  padding: 20px;
+  padding: 30px; /* Increased padding */
+  background-color: #1a002b; /* Slightly lighter background for the form */
+  border-radius: 8px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Larger title */
+    font-weight: 700;
+    color: #a855f7; /* Matching theme color */
+    margin-bottom: 30px;
 }
 
 .form-control {
-  background: transparent;
+  background: #1a002b; /* Matching form background */
   border: 1px solid #a855f7;
   color: white;
+  padding: 12px 15px; /* Adjusted padding */
+  border-radius: 5px; /* Rounded input fields */
 }
 
 .form-control::placeholder {
   color: #bbb;
+  opacity: 0.8; /* Slightly less opaque placeholder */
 }
 
 .form-control:focus {
-  box-shadow: 0 0 5px #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6); /* Enhanced focus shadow */
   border-color: #a855f7;
+  background-color: #1a002b; /* Keep background consistent on focus */
+}
+
+textarea.form-control {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px; /* Minimum height for textarea */
 }
 
 .send-btn {
   background-color: #a855f7 !important;
   color: white !important;
   border: none;
-  transition: background-color 0.3s;
+  padding: 12px 25px; /* Adjusted padding */
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px; /* Rounded corners */
 }
 
 .send-btn:hover {
   background-color: #9333ea !important;
+  transform: translateY(-2px); /* Subtle hover effect */
 }
 
 /* Responsive design */
-@media (max-width: 992px) {
+@media (max-width: 991.98px) { /* Use Bootstrap's breakpoint for lg-down */
   .contact-section {
-    text-align: center;
+    padding: 60px 15px;
+    min-height: auto; /* Allow section to shrink on smaller screens */
   }
 
-  .contact-item {
-    justify-content: center;
+  .section-title {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+      margin-bottom: 25px;
   }
 
-  .icon-circle {
-    margin-bottom: 10px;
+  .contact-info, .contact-form {
+    padding: 15px; /* Less padding on smaller screens */
   }
 
   .contact-info {
-    margin-bottom: 40px;
+    text-align: center; /* Center align text on smaller screens */
+    margin-bottom: 50px; /* More space between info and form */
+  }
+
+  .contact-item {
+    justify-content: center; /* Center contact items */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items when stacked */
+  }
+
+  .icon-circle {
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+
+  .contact-item h6, .contact-item p {
+      text-align: center;
   }
 
   .social-links {
-    justify-content: center;
+    justify-content: center; /* Center social links */
+    margin-top: 25px;
   }
+
+  .download-btn {
+      width: 100%; /* Full width button on small screens */
+      margin-top: 30px;
+  }
+
+  .contact-form {
+      margin-top: 30px; /* Add some margin above the form on small screens */
+  }
+}
+
+@media (max-width: 767.98px) { /* Medium-down screens */
+    .contact-section {
+        padding: 40px 10px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .contact-item h6 {
+        font-size: 1rem;
+    }
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+    .social-links {
+        gap: 15px;
+    }
+    .social-links a {
+        font-size: 1.3rem;
+    }
+    .download-btn, .send-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) { /* Small-down screens */
+    .contact-section {
+        padding: 30px 5px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .form-control {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    textarea.form-control {
+        min-height: 100px;
+    }
 }

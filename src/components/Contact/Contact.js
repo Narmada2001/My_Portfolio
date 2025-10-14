@@ -2,7 +2,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineMail, AiOutlinePhone, AiOutlineDownload } from "react-icons/ai";
-import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // FaFacebook, FaInstagram, FaLinkedin are not used in your current HTML
 import pdf from "../../Assets/Narmada (SE).pdf";
 import "./Contact.css";
 
@@ -46,12 +46,20 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Social media links could go here if you decide to add them back */}
+            {/* <div className="social-area">
+                <div className="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+                </div>
+            </div> */}
+
             <div className="mt-4">
               <Button variant="primary" href={pdf} target="_blank" className="download-btn">
                 <AiOutlineDownload /> &nbsp; Download CV
               </Button>
             </div>
-
            
           </Col>
 
