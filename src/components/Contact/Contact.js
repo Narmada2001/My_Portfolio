@@ -66,18 +66,40 @@ const Contact = () => {
           {/* ===== RIGHT SIDE: Contact Form ===== */}
           <Col lg={6} md={6} sm={12}>
             <div className="contact-form p-4 rounded shadow-sm">
-              <form>
+              <form action="https://formspree.io/f/xrbyrzve" method="POST">
                 <Row className="mb-3">
                   <Col md={6} className="mb-3 mb-md-0">
-                    <input className="form-control" placeholder="Your Name" required />
+                    <input
+                      className="form-control"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
                   </Col>
                   <Col md={6}>
-                    <input className="form-control" type="email" placeholder="Your Email" required />
+                    <input
+                      className="form-control"
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
                   </Col>
                 </Row>
 
-                <input className="form-control mb-3" placeholder="Subject" required />
-                <textarea className="form-control mb-3" rows={5} placeholder="Message" required />
+                <input
+                  className="form-control mb-3"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea
+                  className="form-control mb-3"
+                  name="message"
+                  rows={5}
+                  placeholder="Message"
+                  required
+                />
                 <Button variant="primary" type="submit" className="w-100 send-btn">
                   Send Message
                 </Button>
