@@ -34,9 +34,7 @@ function About() {
               ABOUT <strong className="purple">ME</strong>
             </h1>
             <p className="about-description text-justify">
-              I’m an undergraduate at the Sabaragamuwa University of Sri Lanka, passionate about creating meaningful digital experiences through design and development. 
-              As a Front-End Developer, Full Stack Developer, and UI/UX Designer, I enjoy crafting clean, user-friendly interfaces using React.js, Node.js, and modern web technologies. 
-              I’m also deeply interested in Project Management, where I love planning, organizing, and leading projects from concept to completion.
+              Motivated and detail-oriented Information Systems undergraduate with practical experience in software design, web development, and project coordination. Skilled in technical, analytical, and problem-solving areas, with a strong foundation in programming, UI/UX design, database management, and agile teamwork. A fast learner with excellent communication and leadership abilities, eager to contribute to innovative IT projects and grow through hands-on industry experience.
             </p>
           </Col>
         </Row>
