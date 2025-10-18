@@ -6,7 +6,7 @@ import Toolstack from "./Toolstack";
 import WebTechnologies from "./WebTechnologies";
 import Tools from "./Tools";
 import DesignToolstack from "./DesignToolstack";
-import Github from "./Github";
+
 
 function About() {
   return (
@@ -65,10 +65,7 @@ function About() {
           <DesignToolstack />
         </section>
 
-        {/* GitHub Section */}
-        <section className="stack-section">
-          <Github />
-        </section>
+       
       </Container>
     </Container>
   );

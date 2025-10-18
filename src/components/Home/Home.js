@@ -62,6 +62,7 @@ function Home() {
                       <AiFillGithub />
                     </a>
                   </li>
+
                   <li className="social-icons">
                     <a
                       href="https://www.linkedin.com/in/narmada-gunathilaka-2818372a7/"
