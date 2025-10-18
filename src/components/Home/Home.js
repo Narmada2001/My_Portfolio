@@ -46,6 +46,8 @@ function Home() {
                 <Type />
               </div>
 
+        
+
               <div className="home-about-social" style={{ marginTop: "30px" }}>
                 <p>
                   Feel free to <span className="purple">connect </span>with me

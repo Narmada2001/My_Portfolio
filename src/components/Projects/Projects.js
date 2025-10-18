@@ -6,6 +6,8 @@ import leaf from "../../Assets/Projects/StoreManagement.jpeg";
 import editor from "../../Assets/Projects/KaviFood.png";
 import chatify from "../../Assets/Projects/DenguePatient.jpg";
 import bitsOfCode from "../../Assets/Projects/SportCenter.jpeg";
+import suicide from "../../Assets/Projects/SLTB.png";
+
 
 function Projects() {
   return (
@@ -91,6 +93,23 @@ function Projects() {
               ghLink="https://github.com/IndWit/sport-center-inventory-management"
             />
           </Col>
+
+  <Col
+            xs={12} // Full width on extra small screens
+            sm={12} // Full width on small screens
+            md={6} // Two cards per row on medium screens
+            lg={6} // Two cards per row on large screens
+            className="d-flex justify-content-center p-3" // Add padding directly here and justify content
+          >
+            <ProjectCard
+              imgPath={suicide}
+              isBlog={false}
+              title="SLTB-TransitEas"
+              description="A web application designed to streamline the public transportation experience in Sri Lanka. It provides real-time bus tracking, route planning, and digital ticketing features."
+              ghLink="https://github.com/Piumalhk/SLTB-TransitEase.git"
+            />
+          </Col>
+
         </Row>
       </Container>
     </Container>
